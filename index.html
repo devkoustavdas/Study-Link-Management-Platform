@@ -16,9 +16,17 @@
     <section>
         <form class="search-container">
             <input type="text" id="search-bar" placeholder="What do you want to study now?">
-            <a href="#"><img class="search-icon"
-                    src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+            <img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png" onclick="searchTopic()">
         </form>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Topic Name</th>
+                    <th scope="col">Subject</th>
+                </tr>
+            </thead>
+            <tbody id="search-result"></tbody>
+        </table>
 
         <div class="tabPanel">
             <div id="videoTabButton" class="activeTab" onclick="openVideos()">Video</div>
@@ -55,5 +63,5 @@
         © Copyright 2023 Koustav Das. All rights reserved.
     </p>
 </body>
-<script src="script.js"></script><script src="spreadsheet.js"></script>
+<script src="script.js"></script><script src="spreadsheet.js"></script><script src="search.js"></script>
 </html>
