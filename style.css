@@ -182,7 +182,7 @@ table th {
 }
 
 .cp-text {
-  position: absolute;
+  position: fixed;
   bottom: 3px;
   font-size: 12px;
   left: 10%;
