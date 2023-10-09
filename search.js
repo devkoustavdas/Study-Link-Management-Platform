@@ -1,7 +1,7 @@
 bodySearch = document.getElementById("search-result");
 
 function searchTopic() {
-  var search = document.getElementById("search-bar").value;
+  var search = removeExtras(document.getElementById("search-bar").value);
   bodySearch.innerHTML = "";
   for (var i = 0; i < videos.length; i++) {
     if (
@@ -53,4 +53,14 @@ function searchTopic() {
 function isWordPresent(sentence, word) {
   var regex = new RegExp(word, "i");
   return regex.test(sentence);
+}
+
+function removeExtras(word) {
+    var newWord = "";
+    for (var i = 0; i < word.length; i++) {
+        if(word[i]!=" " || word[i]!="." || word[i]!="," || word[i]!=";" || word[i]!="/" || word[i]!="(" || word[i]!=")" || word[i]!="[" || word[i]!="]" || word[i]!="#" || word[i]!="!" || word[i]!="@" || word[i]!="_" || word[i]!="%" || word[i]!="&") {
+            newWord += word[i];
+        }
+    }
+    return newWord;
 }
