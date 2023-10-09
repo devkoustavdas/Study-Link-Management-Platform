@@ -180,10 +180,3 @@ table th {
 #notesTab {
   display: none;
 }
-
-.cp-text {
-  position: fixed;
-  bottom: 3px;
-  font-size: 12px;
-  left: 10%;
-}
